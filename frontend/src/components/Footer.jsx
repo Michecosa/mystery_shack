@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <>
       <footer
-        className="py-5 mt-5 text-center "
+        className="py-5 text-center"
         style={{
           backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(${footerBg})`,
           backgroundPosition: "center",

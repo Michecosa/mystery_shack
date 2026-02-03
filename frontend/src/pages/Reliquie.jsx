@@ -220,10 +220,7 @@ export default function Reliquie() {
           </div>
         </section>
       </div>
-      <div
-        className="container text-center text-uppercase fw-light pt-3 px-3 shadow-sm"
-        style={{ marginBottom: "-3rem" }}
-      >
+      <div className="container text-center text-uppercase fw-light pt-3 px-3 shadow-sm">
         <p style={{ fontFamily: '"Oswald", sans-serif', fontSize: "0.8rem" }}>
           Nessun rimborso. Gli oggetti potrebbero essere maledetti, infestati o
           semplicemente pezzi di plastica incollati male. Acquistando, accetti
