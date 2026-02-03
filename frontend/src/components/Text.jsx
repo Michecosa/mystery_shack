@@ -38,7 +38,7 @@ const Text = () => {
   );
 
   return (
-    <div className="scrolling-text-container mt-4">
+    <div className="scrolling-text-container">
       <div className="scrolling-text">
         <span>{renderContent()}</span>
         <span>{renderContent()}</span>

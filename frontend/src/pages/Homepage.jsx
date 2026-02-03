@@ -96,7 +96,7 @@ const Homepage = () => {
       </header>
 
       {/* Griglia Prodotti */}
-      <section className="container py-5">
+      <section className="container py-5 mb-5">
         <div className="row g-4">
           {products.map((product) => (
             <Card key={product.id} product={product} />

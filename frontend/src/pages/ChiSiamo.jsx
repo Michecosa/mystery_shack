@@ -2,6 +2,7 @@ import chisiamoImg from "../assets/chisiamo.png";
 import chisiamoSfondo from "../assets/chisiamoSfondo.png";
 import interrogativoImg from "../assets/interrogativo.png";
 import { Link } from "react-router-dom";
+import Text from "../components/Text";
 import "../ChiSiamo.min.css";
 
 export default function ChiSiamo() {
@@ -33,11 +34,11 @@ export default function ChiSiamo() {
   }));
 
   const backgroundStyle = {
-    backgroundImage: `linear-gradient(to bottom, rgb(0, 0, 0), rgba(147, 72, 43, 0.11), rgb(0, 0, 0)), url(${chisiamoSfondo})`,
+    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(52, 46, 44, 0.11), rgba(0, 0, 0, 0)), url(${chisiamoSfondo})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "fixed",
+    backgroundAttachment: "scroll",
   };
 
   return (
@@ -89,7 +90,7 @@ export default function ChiSiamo() {
           className="d-none d-lg-block"
           style={{
             position: "absolute",
-            bottom: "1%",
+            bottom: "5%",
             left: "3%",
             width: "100px",
             zIndex: 15,
@@ -123,7 +124,7 @@ export default function ChiSiamo() {
             <div className="col-lg-8">
               <h2
                 className="display-4 fw-bold my-4"
-                style={{ color: "#e63946" }}
+                style={{ color: "#dc3545" }}
               >
                 Il Benvenuto del Direttore
               </h2>
@@ -163,6 +164,7 @@ export default function ChiSiamo() {
           </div>
         </div>
       </div>
+      <Text />
 
       <div
         className="container py-5"
