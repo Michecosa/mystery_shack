@@ -1,0 +1,43 @@
+/* .titolo-reliquie {
+  background-color: #f3ca20;
+  color: #2b1d0e;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
+  border: 4px solid #2b1d0e;
+  transform: rotate(-2deg);
+  box-shadow: 8px 8px 0px #2b1d0e;
+  position: relative;
+  display: inline-block;
+}
+
+.titolo-reliquie:hover {
+  transform: rotate(1deg) scale(1.05);
+  transition: 0.3s;
+}
+ */
+
+.jumbotron-section {
+  height: 45vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+.custom-input {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.custom-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+.custom-input:focus {
+  background-color: transparent !important;
+  color: white;
+  border-color: #ffc107;
+  box-shadow: 0 0 10px rgba(255, 193, 7, 0.3);
+}

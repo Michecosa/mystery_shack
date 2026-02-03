@@ -3,6 +3,7 @@ import { CartProvider } from "./context/CartContext";
 import DefaultLayout from "./layout/DefaultLayout";
 import Homepage from "./pages/Homepage";
 import Cart from "./pages/Cart";
+import Reliquie from "./pages/Reliquie";
 
 export default function App() {
   return (
@@ -12,6 +13,7 @@ export default function App() {
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/carrello" element={<Cart />}></Route>
+            <Route path="/reliquie" element={<Reliquie />}></Route>
           </Route>
         </Routes>
       </BrowserRouter>

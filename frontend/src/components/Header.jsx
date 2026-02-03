@@ -43,42 +43,42 @@ export default function Header() {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-md-0 text-uppercase fw-bold py-3">
-            <li className="nav-item">
-              <a
+            <Link to="/reliquie" className="nav-item text-decoration-none">
+              <span
                 className="nav-link custom-link text-dark hover-warning"
                 href="#reliquie"
                 onClick={() => setIsOpen(false)}
               >
                 Reliquie
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
+              </span>
+            </Link>
+            <Link to="/" className="nav-item text-decoration-none">
+              <span
                 className="nav-link custom-link text-dark"
                 href="#abbigliamento"
                 onClick={() => setIsOpen(false)}
               >
                 Abbigliamento
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
+              </span>
+            </Link>
+            <Link to="/" className="nav-item text-decoration-none">
+              <span
                 className="nav-link custom-link"
                 href="#diari"
                 onClick={() => setIsOpen(false)}
               >
                 Diari
-              </a>
-            </li>
-            <li className="nav-item">
-              <a
+              </span>
+            </Link>
+            <Link to="/" className="nav-item text-decoration-none">
+              <span
                 className="nav-link custom-link text-danger fw-bolder"
                 href="#misteri"
                 onClick={() => setIsOpen(false)}
               >
                 Non Entrare
-              </a>
-            </li>
+              </span>
+            </Link>
           </ul>
 
           {/* ICONA CARRELLO (Allineata a destra) */}

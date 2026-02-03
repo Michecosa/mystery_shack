@@ -40,7 +40,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div>
       {/* Hero Section */}
       <header
         className="hero-section pt-5"
