@@ -62,7 +62,7 @@ export default function Header() {
               Chi siamo
             </NavLink>
             <NavLink
-              to="/23-15-15-4-12-21-3-11-25"
+              to="/you-shouldnt-be-here"
               onClick={(e) => {
                 e.preventDefault();
                 setIsOpen(false);
