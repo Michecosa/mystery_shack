@@ -1,6 +1,0 @@
-{
-  "routes": [
-    { "handle": "filesystem" }, // Serve static files first (CSS, JS, images, etc.)
-    { "src": "/(.*)", "dest": "/index.html" } // Redirect all other requests to index.html
-  ]
-}
