@@ -100,7 +100,7 @@ export default function Reliquie() {
   });
 
   return (
-    <div>
+    <>
       <div>
         <header
           className="jumbotron-section pt-5 d-flex justify-content-center align-items-center"
@@ -220,6 +220,16 @@ export default function Reliquie() {
           </div>
         </section>
       </div>
-    </div>
+      <div
+        className="container text-center text-uppercase fw-light pt-3 px-3 shadow-sm"
+        style={{ marginBottom: "-3rem" }}
+      >
+        <p style={{ fontFamily: '"Oswald", sans-serif', fontSize: "0.8rem" }}>
+          Nessun rimborso. Gli oggetti potrebbero essere maledetti, infestati o
+          semplicemente pezzi di plastica incollati male. Acquistando, accetti
+          di non fare causa a Stan Pines o alla Mystery Shack.
+        </p>
+      </div>
+    </>
   );
 }
