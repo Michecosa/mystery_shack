@@ -55,50 +55,52 @@ export default function ChiSiamo() {
           paddingBottom: "5rem",
         }}
       >
-        <img
-          src={interrogativoImg}
-          alt="Mystery Mark"
-          className="d-none d-lg-block"
-          style={{
-            position: "absolute",
-            top: "10%",
-            left: "6%",
-            width: "150px",
-            zIndex: 15,
-            pointerEvents: "none",
-            filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-          }}
-        />
-        <img
-          src={interrogativoImg}
-          alt="Mystery Mark"
-          className="d-none d-lg-block"
-          style={{
-            position: "absolute",
-            top: "40%",
-            right: "6%",
-            width: "160px",
-            zIndex: 15,
-            pointerEvents: "none",
-            filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-            transform: "rotate(25deg)",
-          }}
-        />
-        <img
-          src={interrogativoImg}
-          alt="Mystery Mark"
-          className="d-none d-lg-block"
-          style={{
-            position: "absolute",
-            bottom: "5%",
-            left: "3%",
-            width: "100px",
-            zIndex: 15,
-            pointerEvents: "none",
-            filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-            transform: "rotate(45deg)",
-          }}
-        />
+        <div style={{ opacity: "0.8" }}>
+          <img
+            src={interrogativoImg}
+            alt="Mystery Mark"
+            className="d-none d-lg-block"
+            style={{
+              position: "absolute",
+              top: "10%",
+              left: "6%",
+              width: "150px",
+              zIndex: 15,
+              pointerEvents: "none",
+              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
+            }}
+          />
+          <img
+            src={interrogativoImg}
+            alt="Mystery Mark"
+            className="d-none d-lg-block"
+            style={{
+              position: "absolute",
+              top: "40%",
+              right: "6%",
+              width: "160px",
+              zIndex: 15,
+              pointerEvents: "none",
+              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
+              transform: "rotate(25deg)",
+            }}
+          />
+          <img
+            src={interrogativoImg}
+            alt="Mystery Mark"
+            className="d-none d-lg-block"
+            style={{
+              position: "absolute",
+              bottom: "5%",
+              left: "3%",
+              width: "100px",
+              zIndex: 15,
+              pointerEvents: "none",
+              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
+              transform: "rotate(45deg)",
+            }}
+          />
+        </div>
         <div
           className="firefly-container"
           style={{ position: "absolute", zIndex: 1 }}
@@ -155,7 +157,7 @@ export default function ChiSiamo() {
                   height: "auto",
                   display: "block",
                   objectFit: "contain",
-                  filter: "drop-shadow(0 0 7px rgba(0, 0, 0, 0.76))",
+                  filter: "drop-shadow(0 0 7px rgba(21, 7, 7, 0.76))",
                   position: "relative",
                   zIndex: 10,
                 }}
