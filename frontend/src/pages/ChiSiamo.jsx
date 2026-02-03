@@ -127,7 +127,7 @@ export default function ChiSiamo() {
               >
                 Il Benvenuto del Direttore
               </h2>
-              <p className="lead fst-italic mb-2">
+              <p className="lead fst-italic mb-4">
                 "Benvenuti! Sono <b>Stanford Pines</b>, ma per voi il Signor
                 Pines. Ho fondato il Mystery Shack perché credo che ognuno di
                 voi meriti di spendere i propri risparmi in cose che non capisce
@@ -147,8 +147,10 @@ export default function ChiSiamo() {
               <img
                 src={chisiamoImg}
                 alt="Il Mystery Shack e Stan Pines"
-                className="img-fluid w-100"
+                className="img-fluid"
                 style={{
+                  margin: "auto",
+                  width: "60%",
                   height: "auto",
                   display: "block",
                   objectFit: "contain",
