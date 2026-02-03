@@ -45,3 +45,35 @@
 .custom-toggler .navbar-toggler-icon {
   filter: invert(1) brightness(2);
 }
+
+.custom-link.active-glow {
+  color: #ffc107 !important;
+  text-shadow:
+    0 0 8px rgba(255, 193, 7, 0.8),
+    0 0 15px rgba(255, 193, 7, 0.5);
+  transition: all 0.3s ease;
+}
+
+.custom-link.active-danger-glow {
+  color: #ff0000 !important;
+  text-shadow:
+    0 0 10px rgba(255, 0, 25, 0.8),
+    0 0 20px rgba(255, 0, 25, 0.6),
+    0 0 30px rgba(255, 0, 25, 0.4);
+  transition: all 0.3s ease;
+  animation: pulse-danger 2s infinite;
+}
+
+@keyframes pulse-danger {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 0, 25, 0.8);
+  }
+  50% {
+    text-shadow:
+      0 0 20px rgb(255, 0, 25),
+      0 0 30px rgba(255, 0, 25, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(255, 0, 25, 0.8);
+  }
+}

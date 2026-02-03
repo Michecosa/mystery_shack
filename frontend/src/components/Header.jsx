@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useCart } from "../context/CartContext";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import headerLOGO from "../assets/headerLOGO.png";
 import "../Header.min.css";
 
@@ -18,14 +18,14 @@ export default function Header() {
     >
       <div className="container">
         {/* LOGO */}
-        <Link className="navbar-brand d-flex align-items-center" to="/">
+        <NavLink className="navbar-brand d-flex align-items-center" to="/">
           <img
             src={headerLOGO}
             alt="Mystery Shack"
             style={{ maxHeight: "50px", width: "auto" }}
             className="img-fluid"
           />
-        </Link>
+        </NavLink>
 
         <button
           className="navbar-toggler custom-toggler border-0"
@@ -43,47 +43,41 @@ export default function Header() {
           id="navbarNav"
         >
           <ul className="navbar-nav ms-auto mb-2 mb-md-0 text-uppercase fw-bold py-3">
-            <Link to="/reliquie" className="nav-item text-decoration-none">
-              <span
-                className="nav-link custom-link text-dark hover-warning"
-                href="#reliquie"
-                onClick={() => setIsOpen(false)}
-              >
-                Reliquie
-              </span>
-            </Link>
-            <Link to="/" className="nav-item text-decoration-none">
-              <span
-                className="nav-link custom-link text-dark"
-                href="#abbigliamento"
-                onClick={() => setIsOpen(false)}
-              >
-                Abbigliamento
-              </span>
-            </Link>
-            <Link to="/" className="nav-item text-decoration-none">
-              <span
-                className="nav-link custom-link"
-                href="#diari"
-                onClick={() => setIsOpen(false)}
-              >
-                Diari
-              </span>
-            </Link>
-            <Link to="/" className="nav-item text-decoration-none">
-              <span
-                className="nav-link custom-link text-danger fw-bolder"
-                href="#misteri"
-                onClick={() => setIsOpen(false)}
-              >
-                Non Entrare
-              </span>
-            </Link>
+            <NavLink
+              to="/reliquie"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `nav-item nav-link custom-link text-decoration-none ${isActive ? "active-glow" : "text-dark"}`
+              }
+            >
+              Reliquie
+            </NavLink>
+            <NavLink
+              to="/chisiamo"
+              onClick={() => setIsOpen(false)}
+              className={({ isActive }) =>
+                `nav-item nav-link custom-link text-decoration-none ${isActive ? "active-glow" : "text-dark"}`
+              }
+            >
+              Chi siamo
+            </NavLink>
+            <NavLink
+              to="/23-15-15-4-12-21-3-11-25"
+              onClick={(e) => {
+                e.preventDefault();
+                setIsOpen(false);
+              }}
+              className={({ isActive }) =>
+                `nav-item nav-link custom-link text-decoration-none text-danger ${isActive ? "active-danger-glow" : "text-danger"}`
+              }
+            >
+              Non entrare
+            </NavLink>
           </ul>
 
           {/* ICONA CARRELLO (Allineata a destra) */}
           <div className="d-flex align-items-center ms-md-4 mt-3 mt-md-0">
-            <Link
+            <NavLink
               to="/carrello"
               className="position-relative custom-link  text-decoration-none"
             >
@@ -105,7 +99,7 @@ export default function Header() {
                   <span className="visually-hidden">prodotti nel carrello</span>
                 </span>
               )}
-            </Link>
+            </NavLink>
           </div>
         </div>
       </div>
