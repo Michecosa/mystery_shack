@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Import necessario
 import "../Text.min.css";
 
 const Text = () => {
@@ -21,6 +22,18 @@ const Text = () => {
           <span className="mx-2">&ndash;</span>
         </span>
       ))}
+
+      <Link
+        to="/23-15-15-4-12-21-3-11-25"
+        style={{
+          textDecoration: "none",
+          color: "inherit",
+          cursor: "text",
+        }}
+      >
+        Il codice è nella scatola
+      </Link>
+      <span className="mx-2">&ndash;</span>
     </>
   );
 

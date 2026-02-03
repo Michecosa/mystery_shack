@@ -45,7 +45,6 @@ export default function Footer() {
             Se trovi dei frammenti di portali, <br />
             riportali a Stan Pines. <br />
             <span className="fw-light mt-2 d-block">
-              Codice segreto:{" "}
               <span className="font-monospace text-warning">
                 23-15-15-4-12-21-3-11-25
               </span>
