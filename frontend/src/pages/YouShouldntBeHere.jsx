@@ -3,7 +3,7 @@ export default function YouShouldntBeHere() {
     <>
       <div className="container">
         <div style={{ marginTop: "12rem" }}>
-          <h1>You shouldn't be here.</h1>
+          <h1>Non dovresti essere qui.</h1>
         </div>
       </div>
     </>

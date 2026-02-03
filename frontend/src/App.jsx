@@ -18,7 +18,7 @@ export default function App() {
             <Route path="/reliquie" element={<Reliquie />}></Route>
             <Route path="/chisiamo" element={<ChiSiamo />}></Route>
             <Route
-              path="/you-shouldnt-be-here"
+              path="/non-dovresti-essere-qui"
               element={<YouShouldntBeHere />}
             ></Route>
           </Route>

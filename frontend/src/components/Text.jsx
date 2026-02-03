@@ -24,7 +24,7 @@ const Text = () => {
       ))}
 
       <Link
-        to="/you-shouldnt-be-here"
+        to="/non-dovresti-essere-qui"
         style={{
           textDecoration: "none",
           color: "inherit",
