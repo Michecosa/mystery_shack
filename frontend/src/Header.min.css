@@ -1,0 +1,47 @@
+/* Header / Navigation Styles */
+
+.navbar-transparent {
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(2px);
+  padding: 0 !important;
+  transition: all 0.3s ease;
+}
+
+.bg-mobile-open {
+  background-image: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0),
+    rgba(0, 0, 0, 0.628),
+    rgba(0, 0, 0, 0.79),
+    rgba(0, 0, 0, 0.651),
+    rgba(0, 0, 0, 0)
+  ) !important;
+  padding-bottom: 1rem !important;
+}
+
+.custom-link {
+  color: var(--shack-text) !important;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  letter-spacing: 0.1em;
+}
+
+.custom-link:hover {
+  color: #ffffff !important;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+.nav-link.text-danger:hover {
+  color: #ff0000 !important;
+  text-shadow:
+    0 0 5px #ff0000,
+    0 0 15px rgba(255, 0, 0, 0.8);
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(1) brightness(2);
+}

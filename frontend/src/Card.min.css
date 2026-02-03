@@ -1,0 +1,32 @@
+/* Card / Product Grid Styles */
+
+.product-card {
+  background-color: var(--shack-brown-light);
+  border: 2px solid rgba(180, 83, 9, 0.2);
+  padding: 1.5rem;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+.product-card .product-tag {
+  text-transform: uppercase;
+}
+
+.product-card:hover {
+  transform: translateY(-10px) rotate(-1deg);
+  border-color: var(--shack-amber-dark);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5);
+}
+
+.product-icon-container {
+  background-color: #0f0805;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}

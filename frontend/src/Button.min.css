@@ -1,0 +1,26 @@
+/* Button Styles */
+
+.btn-shack-primary {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  background-color: #ffe940;
+  color: rgb(226, 0, 0);
+  padding: 0.85rem 2.5rem !important;
+  border: solid black 6px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  box-shadow: 5px 5px 0px #000;
+  transition: all 0.2s;
+  cursor: pointer;
+  border-radius: 3rem;
+}
+
+.btn-shack-primary:hover {
+  background-color: rgb(255, 235, 85);
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px #000;
+}
+
+.btn-card {
+  letter-spacing: 0.1em;
+}

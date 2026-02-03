@@ -1,0 +1,48 @@
+/* Importazione dei font */
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+/* Component Styles */
+@import url("./Header.min.css");
+@import url("./Hero.min.css");
+@import url("./Button.min.css");
+@import url("./Card.min.css");
+@import url("./Text.min.css");
+
+:root {
+  --shack-brown-dark: #120b08;
+  --shack-brown-light: #1c120e;
+  --shack-amber: #fbbf24;
+  --shack-amber-dark: #b45309;
+  --shack-text: #f3e5ab;
+}
+
+body {
+  min-width: 370px;
+  font-family: "Oswald", sans-serif;
+  background-color: var(--shack-brown-dark);
+  color: var(--shack-text);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+nav {
+  padding: 0 !important;
+}
+
+.special-font {
+  font-family: "Special Elite", cursive;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--shack-brown-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--shack-amber-dark);
+}
