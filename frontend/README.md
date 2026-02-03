@@ -1,16 +1,87 @@
-# React + Vite
+# Mystery Shack - Sito Ufficiale
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Benvenuto al sito ufficiale di **Mystery Shack**, l'attrazione turistica più misteriosa di Gravity Falls, Oregon!
 
-Currently, two official plugins are available:
+## Descrizione
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Mystery Shack è una struttura commerciale che offre ai visitatori la possibilità di scoprire reperti strani, misteriosi e sovrumani. Gestita dalla famiglia Pines, il sito è diventato famoso per la sua collezione unica di artefatti anomali e per le storie incredibili che vi si nascondono dietro.
 
-## React Compiler
+Questo sito web permette ai visitatori di:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 **Scoprire le Reliquie**: Esplorare la nostra collezione esclusiva di reperti misteriosi e rari
+- 🛍️ **Acquistare Souvenir**: Portarsi a casa un pezzo di Mystery Shack
+- ℹ️ **Saperne di Più**: Conoscere la storia e gli operatori della struttura
+- 🛒 **Gestire il Carrello**: Selezionare e ordinare i propri articoli preferiti
 
-## Expanding the ESLint configuration
+## 🌐 Demo Live
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Vuoi visitare Mystery Shack senza installare nulla? Accedi alla versione live del sito:
+
+👉 **[Visita Mystery Shack](https://mystery-shack.vercel.app/)**
+
+## Caratteristiche Principali
+
+### Pagine Disponibili
+
+- **Homepage**: Introduzione e hero section con le principali attrazioni
+- **Chi Siamo**: La storia di Mystery Shack e della famiglia che la gestisce
+- **Reliquie**: Catalogo completo dei reperti disponibili con dettagli e prezzi
+- **Carrello**: Gestione degli articoli selezionati
+
+### Design Responsivo
+
+Il sito è completamente responsive e ottimizzato per dispositivi desktop, tablet e mobile.
+
+## Tecnologie Utilizzate
+
+- **Frontend**: React + Vite
+- **Styling**: CSS Modules e CSS Minificati
+- **State Management**: Context API (CartContext)
+- **Build Tool**: Vite
+
+## Installazione e Avvio
+
+```bash
+
+# Spostarsi in \frontend
+cd .\frontend\
+
+# Installare le dipendenze
+npm init
+
+# Avviare il server di sviluppo
+npm run dev
+
+```
+
+## Struttura del Progetto
+
+```
+├── .github
+│   └── appmod
+│       └── appcat
+├── backend
+└── frontend
+    ├── public
+    │   └── vite.svg
+    ├── src
+    │   ├── assets
+    │   ├── components
+    │   ├── context
+    │   ├── layout
+    │   ├── pages
+    │   ├── App.jsx
+    │   ├── index.css
+    │   └── main.jsx
+    ├── .gitignore
+    ├── README.md
+    ├── eslint.config.js
+    ├── index.html
+    ├── package-lock.json
+    ├── package.json
+    └── vite.config.js
+```
+
+## Note
+
+Se vedi una pagina che non dovrebbe esserci, ti consigliamo vivamente di ignorarla. Non tutti i misteri di Gravity Falls sono destinati ad essere scoperti
