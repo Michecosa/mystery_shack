@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import diarioImg from "../assets/diario3.png";
 import fezImg from "../assets/fez.png";
 import gnomoImg from "../assets/gnome.png";
@@ -71,10 +73,12 @@ const Homepage = () => {
             </p>
 
             <div className="d-flex flex-column flex-sm-row gap-3 justify-content-center mt-4">
-              <button className="btn-shack-primary px-5 py-3 fs-4">
-                ACQUISTA ORA <br />
-                (NO RIMBORSI!)
-              </button>
+              <Link to="/reliquie">
+                <button className="btn-shack-primary px-5 py-3 fs-4">
+                  ACQUISTA ORA <br />
+                  (NO RIMBORSI!)
+                </button>
+              </Link>
             </div>
             <img
               src={spedizioneImg}
