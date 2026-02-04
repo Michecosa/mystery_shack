@@ -53,15 +53,6 @@ export default function Header() {
               Reliquie
             </NavLink>
             <NavLink
-              to="/chisiamo"
-              onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `nav-item nav-link custom-link text-decoration-none ${isActive ? "active-glow" : "text-dark"}`
-              }
-            >
-              Chi siamo
-            </NavLink>
-            <NavLink
               to="/non-dovresti-essere-qui"
               onClick={(e) => {
                 e.preventDefault();

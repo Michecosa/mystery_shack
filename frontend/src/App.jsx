@@ -5,7 +5,6 @@ import Homepage from "./pages/Homepage";
 import Cart from "./pages/Cart";
 import Reliquie from "./pages/Reliquie";
 import YouShouldntBeHere from "./pages/YouShouldntBeHere";
-import ChiSiamo from "./pages/ChiSiamo";
 
 export default function App() {
   return (
@@ -16,7 +15,6 @@ export default function App() {
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/carrello" element={<Cart />}></Route>
             <Route path="/reliquie" element={<Reliquie />}></Route>
-            <Route path="/chisiamo" element={<ChiSiamo />}></Route>
             <Route
               path="/non-dovresti-essere-qui"
               element={<YouShouldntBeHere />}

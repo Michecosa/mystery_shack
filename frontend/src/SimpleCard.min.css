@@ -1,0 +1,11 @@
+.glow-qui {
+  transition:
+    transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    filter 0.3s ease;
+}
+
+.glow-qui:hover {
+  filter: drop-shadow(0 0 10px rgb(255, 191, 0));
+  transform: translateY(0px) rotate(0deg) scale(1.05) !important;
+  z-index: 4;
+}

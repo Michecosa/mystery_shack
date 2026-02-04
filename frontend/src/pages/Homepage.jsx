@@ -12,6 +12,7 @@ import OfferClients from "../components/OfferClients";
 import Text from "../components/Text";
 import "../Hero.min.css";
 import "../Button.min.css";
+import ChiSiamo from "../components/ChiSiamo";
 
 const Homepage = () => {
   const products = [
@@ -105,6 +106,8 @@ const Homepage = () => {
       </section>
       <Text />
       <OfferClients />
+      <Text />
+      <ChiSiamo />
     </div>
   );
 };
