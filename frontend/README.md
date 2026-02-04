@@ -24,7 +24,6 @@ Vuoi visitare Mystery Shack senza installare nulla? Accedi alla versione live de
 ### Pagine Disponibili
 
 - **Homepage**: Introduzione e hero section con le principali attrazioni
-- **Chi Siamo**: La storia di Mystery Shack e della famiglia che la gestisce
 - **Reliquie**: Catalogo completo dei reperti disponibili con dettagli e prezzi
 - **Carrello**: Gestione degli articoli selezionati
 
