@@ -1,5 +1,4 @@
-/* Container per le lucciole */
-.firefly-container {
+/* .firefly-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -9,7 +8,6 @@
   z-index: 1;
 }
 
-/* La singola lucciola */
 .firefly {
   position: absolute;
   width: 4px;
@@ -51,3 +49,4 @@
     opacity: 1;
   }
 }
+ */

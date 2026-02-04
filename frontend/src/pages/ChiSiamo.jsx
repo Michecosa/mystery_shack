@@ -1,190 +1,119 @@
-import chisiamoImg from "../assets/chisiamo.png";
-import chisiamoSfondo from "../assets/chisiamoSfondo.png";
-import interrogativoImg from "../assets/interrogativo.png";
-import { Link } from "react-router-dom";
-import Text from "../components/Text";
-import "../ChiSiamo.min.css";
+import jumbotronChiSiamo from "../assets/chisiamo.png";
+import legnoImg from "../assets/legno.png";
+import ramoImg0 from "../assets/backgroundEl1.png";
+import pageImg from "../assets/page.png";
 
 export default function ChiSiamo() {
-  const staff = [
-    {
-      nome: "Soos",
-      ruolo: "Tuttofare / Guru",
-      desc: "Se qualcosa si rompe, lui lo aggiusta con il nastro isolante e il potere dell'ottimismo.",
-    },
-    {
-      nome: "Wendy",
-      ruolo: "Cassa / Gestione Stress",
-      desc: "È qui solo perché paghiamo (poco) e per guardare il telefono in santa pace.",
-    },
-    {
-      nome: "Dipper & Mabel",
-      ruolo: "Stagisti non pagati",
-      desc: "Si occupano di catalogare mostri e di far sì che lo zio Stan non finisca in prigione.",
-    },
-  ];
+  const getWoodStyle = (rotation) => ({
+    backgroundImage: `url(${legnoImg})`,
+    backgroundSize: "100% 100%",
+    backgroundRepeat: "no-repeat",
+    padding: "6rem 5rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    color: "#e0d7c6",
+    textShadow: "2px 2px 4px rgba(0, 0, 0, 0.44)",
+    filter: "drop-shadow(0 0 10px rgb(255, 193, 7))",
+    transform: `rotate(${rotation}deg)`,
+  });
 
-  const fireflies = Array.from({ length: 25 }).map((_, i) => ({
-    id: i,
-    left: `${Math.random() * 100}%`,
-    top: `${Math.random() * 100}%`,
-    duration: `${Math.random() * 15 + 10}s`,
-    flashDuration: `${Math.random() * 3 + 2}s`,
-    delay: `${Math.random() * 5}s`,
-  }));
-
-  const backgroundStyle = {
-    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(52, 46, 44, 0.11), rgba(0, 0, 0, 0)), url(${chisiamoSfondo})`,
+  const pageStyle = {
+    backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(44, 31, 23, 0), rgba(118, 118, 118, 0), rgba(44, 31, 23, 0.42))`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    backgroundAttachment: "scroll",
+    padding: "15rem",
+    paddingTop: "0rem",
+    filter: "drop-shadow(0 10px 10px rgba(0, 0, 0, 0.49))",
   };
 
   return (
-    <div style={{ paddingBottom: "10rem" }}>
+    <div style={{ backgroundColor: "#000" }}>
       <div
+        className="d-flex justify-content-center align-items-start position-relative"
         style={{
-          ...backgroundStyle,
+          backgroundImage: `linear-gradient(to bottom, rgb(0, 0, 0), rgba(118, 118, 118, 0.3), rgb(0, 0, 0)), url(${jumbotronChiSiamo})`,
           minHeight: "100vh",
-          position: "relative",
-          overflow: "hidden",
-          display: "flex",
-          alignItems: "center",
-          paddingTop: "8rem",
-          paddingBottom: "5rem",
+          backgroundSize: "cover",
+          backgroundPosition: "bottom",
+          zIndex: "9",
         }}
-      >
-        <div style={{ opacity: "0.8" }}>
-          <img
-            src={interrogativoImg}
-            alt="Mystery Mark"
-            className="d-none d-lg-block"
-            style={{
-              position: "absolute",
-              top: "10%",
-              left: "6%",
-              width: "150px",
-              zIndex: 15,
-              pointerEvents: "none",
-              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-            }}
-          />
-          <img
-            src={interrogativoImg}
-            alt="Mystery Mark"
-            className="d-none d-lg-block"
-            style={{
-              position: "absolute",
-              top: "40%",
-              right: "6%",
-              width: "160px",
-              zIndex: 15,
-              pointerEvents: "none",
-              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-              transform: "rotate(25deg)",
-            }}
-          />
-          <img
-            src={interrogativoImg}
-            alt="Mystery Mark"
-            className="d-none d-lg-block"
-            style={{
-              position: "absolute",
-              bottom: "5%",
-              left: "3%",
-              width: "100px",
-              zIndex: 15,
-              pointerEvents: "none",
-              filter: "drop-shadow(0 0 10px rgb(255, 255, 255))",
-              transform: "rotate(45deg)",
-            }}
-          />
-        </div>
-        <div
-          className="firefly-container"
-          style={{ position: "absolute", zIndex: 1 }}
-        >
-          {fireflies.map((f) => (
-            <div
-              key={f.id}
-              className="firefly"
-              style={{
-                left: f.left,
-                top: f.top,
-                width: f.size,
-                height: f.size,
-                animationDuration: `${f.duration}, ${f.flashDuration}`,
-                animationDelay: `${f.delay}`,
-              }}
-            />
-          ))}
-        </div>
-
-        <div className="container" style={{ position: "relative", zIndex: 2 }}>
-          <div className="row justify-content-center text-center">
-            <div className="col-lg-8">
-              <h2
-                className="display-4 fw-bold my-4"
-                style={{ color: "#dc3545" }}
-              >
-                Il Benvenuto del Direttore
-              </h2>
-              <p className="lead fst-italic mb-4">
-                "Benvenuti! Sono <b>Stanford Pines</b>, ma per voi il Signor
-                Pines. Ho fondato il Mystery Shack perché credo che ognuno di
-                voi meriti di spendere i propri risparmi in cose che non capisce
-                minimamente. Siamo l'unica{" "}
-                <span
-                  className="text-decoration-line-through"
-                  style={{ color: "#f3e5abac" }}
-                >
-                  trappola per turisti
-                </span>{" "}
-                attrazione culturale certificata di Gravity Falls."
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
-              <img
-                src={chisiamoImg}
-                alt="Il Mystery Shack e Stan Pines"
-                className="img-fluid"
-                style={{
-                  margin: "auto",
-                  width: "60%",
-                  height: "auto",
-                  display: "block",
-                  objectFit: "contain",
-                  filter: "drop-shadow(0 0 7px rgba(21, 7, 7, 0.76))",
-                  position: "relative",
-                  zIndex: 10,
-                }}
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <Text />
+      ></div>
 
       <div
-        className="container py-5"
-        style={{ position: "relative", zIndex: 3 }}
+        className="row align-items-stretch justify-content-center g-5 px-3 position-relative"
+        style={{ ...pageStyle, paddingBottom: "15rem", margin: 0 }}
       >
-        <div className="text-center mt-5">
-          <Link to="/reliquie" className="text-decoration-none">
-            <button
-              className="btn btn-lg btn-danger px-5 py-3 rounded-pill fw-bold"
-              style={{
-                fontSize: "1.5rem",
-                borderBottom: "6px solid #9d252f",
-                transition: "0.2s",
-              }}
-            >
-              BASTA CHIACCHIERE, PORTAMI AI PRODOTTI!
-            </button>
-          </Link>
+        <div
+          className="text-center"
+          style={{
+            paddingBottom: "2rem",
+            filter: "drop-shadow(0 0 10px rgb(255, 193, 7))",
+          }}
+        >
+          <h2
+            className="display-1 text-uppercase mb-4 h2-offer-clients text-warning"
+            style={{
+              borderBottom: "2px solid",
+              display: "inline",
+              width: "auto",
+            }}
+          >
+            Chi siamo noi?
+          </h2>
+        </div>
+
+        <div className="col-12 col-md-6 col-lg-5 d-flex flex-column gap-4 text-center">
+          <div style={getWoodStyle(-2)}>
+            <h2>I Custodi del Mistero</h2>
+            <p className="flex-grow-1 mb-0">
+              Creato dal "filantropo" Stan Pines, il Mystery Shack è il faro
+              dell'ignoto nell'Oregon. Il posto più onesto della contea (non
+              controllate i registri fiscali).
+            </p>
+          </div>
+
+          <div style={getWoodStyle(2)}>
+            <h2>Meraviglie Inaudite</h2>
+            <p className="flex-grow-1 mb-0">
+              Dal Jackalope alla Donna Gatto, ogni reperto è garantito come
+              "probabilmente vero". Se non lo vedi, è solo troppo spaventoso per
+              i tuoi occhi mortali.
+            </p>
+          </div>
+        </div>
+
+        <div className="col-12 col-md-6 col-lg-5 d-flex flex-column gap-4 text-center">
+          <div style={getWoodStyle(5)}>
+            <h2>Un Team imbattibile</h2>
+            <p className="flex-grow-1 mb-0">
+              Tra esperti del paranormale (e delle pulizie) e stagisti
+              silenziosi, siamo una famiglia. Soos ripara tutto, Wendy... resta
+              seduta con stile.
+            </p>
+          </div>
+
+          <div style={getWoodStyle(-2)}>
+            <h2>La Nostra Promessa</h2>
+            <p className="flex-grow-1 mb-0">
+              La vostra soddisfazione è importante, ma il vostro denaro è la
+              nostra passione. Entrate come estranei, uscite con almeno tre
+              portachiavi!
+            </p>
+          </div>
+
+          <img
+            src={ramoImg0}
+            alt="ramo"
+            className="m-0 p-0 position-absolute d-none d-lg-block"
+            style={{
+              width: "50vw",
+              height: "auto",
+              bottom: "0rem",
+              left: "0%",
+            }}
+          />
         </div>
       </div>
     </div>

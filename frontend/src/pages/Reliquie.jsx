@@ -109,6 +109,7 @@ export default function Reliquie() {
             minHeight: "400px",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            /*             backgroundAttachment: "scroll", */
           }}
         >
           <div className="position-relative">
