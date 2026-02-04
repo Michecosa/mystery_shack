@@ -80,7 +80,7 @@ export default function ChiSiamo() {
         <img
           src={ramoImg0}
           alt="ramo"
-          className="m-0 p-0 position-absolute d-none d-lg-block"
+          className="m-0 p-0 position-absolute"
           style={{
             width: "50vw",
             height: "auto",
