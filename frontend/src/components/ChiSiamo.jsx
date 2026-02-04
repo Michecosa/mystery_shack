@@ -28,11 +28,10 @@ export default function ChiSiamo() {
           className="text-center"
           style={{
             paddingBottom: "2rem",
-            filter: "drop-shadow(0 0 10px rgb(255, 193, 7))",
           }}
         >
           <h2
-            className="display-1 text-uppercase mb-4 h2-offer-clients text-warning"
+            className="display-1 fw-normal text-uppercase mb-4 h2-offer-clients text-warning"
             style={{
               borderBottom: "2px solid",
               display: "inline",

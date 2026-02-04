@@ -1,14 +1,9 @@
 export default function SimpleCard({ title, children }) {
   return (
     <>
-      <div
-        className="product-card glow-qui h-100 d-flex flex-column p-4"
-        style={{
-          border: "1px solid rgba(255, 193, 7, 0.2)",
-        }}
-      >
+      <div className="product-card glow-qui h-100 d-flex flex-column p-4">
         <div className="flex-grow-1">
-          <h3 className="h2 fw-black mb-3 text-uppercase tracking-tight text-white">
+          <h3 className="h2 fw-black mb-3 text-uppercase tracking-tight">
             {title}
           </h3>
 
