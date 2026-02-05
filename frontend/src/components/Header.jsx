@@ -5,8 +5,9 @@ import headerLOGO from "../assets/headerLOGO.png";
 import "../Header.min.css";
 
 export default function Header() {
-  const { cartCount } = useCart();
+  const { getTotalItems } = useCart();
   const [isOpen, setIsOpen] = useState(false);
+  const cartCount = getTotalItems();
 
   return (
     <nav

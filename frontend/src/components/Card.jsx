@@ -38,7 +38,7 @@ export default function Card({ product }) {
         <div className="d-flex justify-content-between align-items-center mt-auto">
           <span className="h3 fw-bold text-warning mb-0">${product.price}</span>
           <button
-            onClick={() => addToCart()}
+            onClick={() => addToCart(product)}
             className="btn btn-warning fw-bold rounded-0 btn-card"
           >
             AGGIUNGI
