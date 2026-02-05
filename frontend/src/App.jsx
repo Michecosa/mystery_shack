@@ -5,11 +5,13 @@ import Homepage from "./pages/Homepage";
 import Cart from "./pages/Cart";
 import Reliquie from "./pages/Reliquie";
 import YouShouldntBeHere from "./pages/YouShouldntBeHere";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
     <CartProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route element={<DefaultLayout />}>
             <Route path="/" element={<Homepage />}></Route>
