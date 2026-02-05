@@ -47,7 +47,7 @@ export default function Cart() {
             className="card rounded-0 border-warning"
             style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
           >
-            <div className="table-responsive p-3">
+            <div className="table-responsive p-3 d-none d-md-block">
               <table
                 className="table table-dark custom-table-hover mb-0"
                 style={{ background: "transparent" }}
@@ -116,7 +116,7 @@ export default function Cart() {
                                 parseInt(e.target.value) || 1,
                               )
                             }
-                            className="form-control form-control-sm text-center"
+                            className="form-control form-control-sm text-center bg-dark text-white border-warning no-spinner"
                             style={{ width: "60px" }}
                           />
                           <button
@@ -144,6 +144,89 @@ export default function Cart() {
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            <div className="d-md-none p-3">
+              {cartItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="border-bottom border-secondary mb-4 pb-3"
+                >
+                  <div className="row g-2 mb-3">
+                    <div className="col-4">
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          objectFit: "cover",
+                          marginRight: "15px",
+                        }}
+                      />
+                    </div>
+                    <div className="col-8">
+                      <h6 className="text-uppercase fw-bold mb-1 text-white">
+                        {item.title}
+                      </h6>
+                      <small
+                        className="d-block text-white"
+                        style={{ fontSize: "0.75rem", opacity: "0.70" }}
+                      >
+                        {item.desc}
+                      </small>
+                      <div className="text-warning fw-bold mt-1">
+                        ${parseFloat(item.price).toFixed(2)}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="row g-2 align-items-center">
+                    <div className="col-7">
+                      <div className="d-flex align-items-center gap-2">
+                        <button
+                          onClick={() =>
+                            updateQuantity(
+                              item.id,
+                              Math.max(1, item.quantity - 1),
+                            )
+                          }
+                          className="btn btn-sm btn-warning rounded-0 fw-bold"
+                        >
+                          &ndash;
+                        </button>
+                        <input
+                          type="number"
+                          value={item.quantity}
+                          onChange={(e) =>
+                            updateQuantity(
+                              item.id,
+                              parseInt(e.target.value) || 1,
+                            )
+                          }
+                          className="form-control form-control-sm text-center bg-dark text-white border-warning no-spinner"
+                          style={{ width: "50px" }}
+                        />
+                        <button
+                          onClick={() =>
+                            updateQuantity(item.id, item.quantity + 1)
+                          }
+                          className="btn btn-sm btn-warning rounded-0 fw-bold"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div className="col-5 text-end">
+                      <button
+                        onClick={() => removeFromCart(item.id)}
+                        className="btn btn-sm btn-danger rounded-0 fw-bold w-100"
+                      >
+                        RIMUOVI
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
